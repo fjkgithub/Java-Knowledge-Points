@@ -19,6 +19,7 @@
   @ControllerAdvice用于拦截Controller的接口，比如当接口抛出异常时，可以被拦截，然后返回指定的报文（如错误信息、错误码）
   
 **3实例**<a name="3"></a>
+---
 controller类
 ```
 @Controller
