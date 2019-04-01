@@ -84,8 +84,7 @@ public class ControllerExceptionHandler {
     }
 }
 ```
----
-<!--统一提示语-->
+统一提示语
 ---
 ```
 public class MessageCode {
@@ -106,8 +105,7 @@ public class MessageCode {
     public final static String  APP_EXCEPTION_CODE = "600";
 }
 ```
----
-<!--异常类  ResultException和AppException一样-->
+异常类  ResultException和AppException一样
 ---
 ```
 public class ResultException extends Exception {
@@ -152,8 +150,7 @@ public class ResultException extends Exception {
     }
 }
 ```
----
-<!--统一返回结果类-->
+统一返回结果类
 ---
 ```
 @Data
