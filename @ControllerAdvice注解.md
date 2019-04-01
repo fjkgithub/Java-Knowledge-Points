@@ -8,15 +8,18 @@
 
 
 **1简介**<a name="1"></a>
+---
   通过@ControllerAdvice注解可以将对于控制器的全局配置放在同一个位置。
   注解了@Controller的类的方法可以使用@ExceptionHandler、@InitBinder、@ModelAttribute注解到方法上。
   @ControllerAdvice注解将作用在所有注解了@RequestMapping的控制器的方法上
   @ExceptionHandler：用于全局处理控制器里的异常
  
 **2作用**<a name="2"></a>
+---
   @ControllerAdvice用于拦截Controller的接口，比如当接口抛出异常时，可以被拦截，然后返回指定的报文（如错误信息、错误码）
   
 *3作用**<a name="3"></a>
+---
 //controller类
 @Controller
 @RequestMapping("/app")
@@ -36,6 +39,7 @@ public class DemoController {
 
 }
  
+---
 @ControllerAdvice
 public class ControllerExceptionHandler {
 
@@ -78,6 +82,7 @@ public class ControllerExceptionHandler {
     }
 }
 
+---
 //统一提示语
 public class MessageCode {
 
@@ -97,6 +102,7 @@ public class MessageCode {
     public final static String  APP_EXCEPTION_CODE = "600";
 }
 
+---
 //异常类  ResultException和AppException一样
 public class ResultException extends Exception {
     private static final long serialVersionUID = 1L;
@@ -140,6 +146,7 @@ public class ResultException extends Exception {
     }
 }
 
+---
 //统一返回结果类
 @Data
 public class ResultData<T> {
