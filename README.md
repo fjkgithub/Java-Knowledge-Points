@@ -1,4 +1,4 @@
-# -My-Knowledge-Points 查漏补缺
+# Java-Knowledge-Points 查漏补缺
 
 ##### 目录
 
