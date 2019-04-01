@@ -41,8 +41,7 @@ public class DemoController {
 }
 ```
 ---
-<!--处理异常类-->
----
+处理异常类
 ```
 @ControllerAdvice
 public class ControllerExceptionHandler {
