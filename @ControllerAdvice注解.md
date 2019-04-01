@@ -9,10 +9,10 @@
 
 **1简介**<a name="1"></a>
 ---
-  通过@ControllerAdvice注解可以将对于控制器的全局配置放在同一个位置。
-  注解了@Controller的类的方法可以使用@ExceptionHandler、@InitBinder、@ModelAttribute注解到方法上。
-  @ControllerAdvice注解将作用在所有注解了@RequestMapping的控制器的方法上
-  @ExceptionHandler：用于全局处理控制器里的异常
+  通过@ControllerAdvice注解可以将对于控制器的全局配置放在同一个位置。<br/>
+  注解了@Controller的类的方法可以使用@ExceptionHandler、@InitBinder、@ModelAttribute注解到方法上。<br/>
+  @ControllerAdvice注解将作用在所有注解了@RequestMapping的控制器的方法上<br/>
+  @ExceptionHandler：用于全局处理控制器里的异常<br/>
  
 **2作用**<a name="2"></a>
 ---
@@ -20,8 +20,9 @@
   
 **3作用**<a name="3"></a>
 ---
-//controller类
+<!--controller类-->
 ---
+```
 @Controller
 @RequestMapping("/app")
 public class DemoController {
@@ -39,10 +40,11 @@ public class DemoController {
     }
 
 }
- 
+```
 ---
-//处理异常类
+<!--处理异常类-->
 ---
+```
 @ControllerAdvice
 public class ControllerExceptionHandler {
 
@@ -84,10 +86,11 @@ public class ControllerExceptionHandler {
         return resultData;
     }
 }
-
+```
 ---
-//统一提示语
+<!--统一提示语-->
 ---
+```
 public class MessageCode {
 
     /**
@@ -105,10 +108,11 @@ public class MessageCode {
 
     public final static String  APP_EXCEPTION_CODE = "600";
 }
-
+```
 ---
-//异常类  ResultException和AppException一样
+<!--异常类  ResultException和AppException一样-->
 ---
+```
 public class ResultException extends Exception {
     private static final long serialVersionUID = 1L;
     private String code;
@@ -150,10 +154,11 @@ public class ResultException extends Exception {
         this.data = data;
     }
 }
-
+```
 ---
-//统一返回结果类
+<!--统一返回结果类-->
 ---
+```
 @Data
 public class ResultData<T> {
     private String code = "600";
@@ -188,5 +193,5 @@ public class ResultData<T> {
         this.msg = msg;
         this.data = t;
     }
-
 }
+```
