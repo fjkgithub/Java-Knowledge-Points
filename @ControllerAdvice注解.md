@@ -40,7 +40,6 @@ public class DemoController {
 
 }
 ```
----
 处理异常类
 ```
 @ControllerAdvice
