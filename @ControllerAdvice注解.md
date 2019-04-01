@@ -21,6 +21,7 @@
 *3作用**<a name="3"></a>
 ---
 //controller类
+---
 @Controller
 @RequestMapping("/app")
 public class DemoController {
@@ -84,6 +85,7 @@ public class ControllerExceptionHandler {
 
 ---
 //统一提示语
+---
 public class MessageCode {
 
     /**
@@ -104,6 +106,7 @@ public class MessageCode {
 
 ---
 //异常类  ResultException和AppException一样
+---
 public class ResultException extends Exception {
     private static final long serialVersionUID = 1L;
     private String code;
@@ -148,6 +151,7 @@ public class ResultException extends Exception {
 
 ---
 //统一返回结果类
+---
 @Data
 public class ResultData<T> {
     private String code = "600";
