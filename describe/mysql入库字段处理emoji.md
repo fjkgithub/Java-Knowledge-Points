@@ -11,9 +11,9 @@
  
 **2处理方式**<a name="2"></a>
 ---
-  1、首先要保证mysql的版本再5.5.1+以上的版本，select version();
-  2、我们数据库最好把默认字符集由utf8 更改为utf8mb4（也可以不改），对应的表默认字符集也更改为utf8mb4（必须改），存储表情的字段默认字符集也要改成utf8mb4（必须改）。执行sql可以到实例看！
-  3、如果是用jdbcTemplate进行数据库操作的话，要在配置连接池中添加属性spring.datasource.base.initSQL=set names utf8mb4;（被添加到连接池之前执行的sql）。注意不同版本的链接池set names utf8mb4方式不同。（有spring.datasource.base.initSQL、spring.datasource.connection-init-sql等...）
+  1、首先要保证mysql的版本再5.5.1+以上的版本，select version();<br/>
+  2、我们数据库最好把默认字符集由utf8 更改为utf8mb4（也可以不改），对应的表默认字符集也更改为utf8mb4（必须改），存储表情的字段默认字符集也要改成utf8mb4（必须改）。执行sql可以到实例看！<br/>
+  3、如果是用jdbcTemplate进行数据库操作的话，要在配置连接池中添加属性spring.datasource.base.initSQL=set names utf8mb4;（被添加到连接池之前执行的sql）。注意不同版本的链接池set names utf8mb4方式不同。（有spring.datasource.base.initSQL、spring.datasource.connection-init-sql等...）<br/>
   
  **3实例**<a name="3"></a>
  ```
